@@ -8,7 +8,7 @@
         nvim /etc/hosts
         reboot
 
-### Create working user
+### Create Working User
         adduser <username>
         usermod -a -G sudo <username>
         su <username>
@@ -21,8 +21,13 @@
         id_rsa.pub  (Public key)        644
         id_rsa      (Private key)       600
 
-### Disable SSH using password and as root
-                nvim /etc/ssh/sshd_config
-                
-                
+### Disable SSH Using Password, Disable Root Access, and Change Port
+        sudo nvim /etc/ssh/sshd_config
+        
+        Port XXXX
+        PermitRootLogin no
+        PubkeyAuthentication yes
+        PasswordAuthentication no
+        
+        
                 
