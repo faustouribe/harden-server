@@ -29,5 +29,11 @@
         PubkeyAuthentication yes
         PasswordAuthentication no
         
+### Install Firewall, Enable IPV6 and Open Required Ports
+        sudo apt install ufw
+        sudo nvim /etc/default/ufw
+                IPV6=yes
+        sudo ufw allow XXX
+        sudo ufw enable
+        sudo ufw status verbose
         
-                
